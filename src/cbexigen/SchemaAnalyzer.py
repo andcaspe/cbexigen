@@ -1494,9 +1494,37 @@ class SchemaAnalyzer(object):
                 for part in list_with_missing:
                     abstract_seq.append(part.name)
 
+                log_write('    Old abstract sequence list:')
+                for seq_index, seq in enumerate(element.abstract_sequences):
+                    log_write(f'      Sequence {seq_index}:')
+                    log_write(f'        {seq[0]}')
+
+                # if a containing abstract sequence already exists, expand it with the newly found missing elements
+                # else just add them as an abstract sequence
+                found_exising_abstract_sequence = False
+                for element_abstract_sequence_index, element_abstract_sequence in enumerate(element.abstract_sequences):
+                    if particle.name in element_abstract_sequence[0]:  # tuple abstract_choice_list, min_occurs, max_occurs
+                        found_exising_abstract_sequence = True
+                        log_write(f'  {element.name_short} already has an abstract sequence containing {particle.name}, expanding')
+                        sequence_to_expand = element.abstract_sequences[element_abstract_sequence_index][0]
+                        sequence_to_expand.extend(abstract_seq)
+                        log_write(f'Initial sequence is {element_abstract_sequence}')
+                        sequence_to_expand = sorted(set(sequence_to_expand))
+                        element_abstract_sequence_list = list(element_abstract_sequence)
+                        element_abstract_sequence_list[0] = sequence_to_expand
+                        element.abstract_sequences[element_abstract_sequence_index] = tuple(element_abstract_sequence_list)
+                        log_write(f'New     sequence is {element.abstract_sequences[element_abstract_sequence_index]}')
+                if not found_exising_abstract_sequence:
+                    element.abstract_sequences.append((abstract_seq, 1, 1))  # tuple abstract_choice_list, min_occurs, max_occurs
+                # this is now true in every case
                 element.has_abstract_sequence = True
-                element.abstract_sequences.append((abstract_seq, 1, 1))
-                log_write(f'  Add abstract sequence to {element.name_short}.')
+
+                log_write(f'  Added abstract sequence to {element.name_short}.')
+
+                log_write('    New abstract sequence list:')
+                for seq_index, seq in enumerate(element.abstract_sequences):
+                    log_write(f'      Sequence {seq_index}:')
+                    log_write(f'        {seq[0]}')
 
                 for p_index, particle in enumerate(element.particles):
                     exist = [x for x in list_with_missing if x.name == particle.name]
@@ -1507,11 +1535,14 @@ class SchemaAnalyzer(object):
                     elif first_set:
                         last = p_index
 
-                log_write('  New particle list:')
+                log_write('  Old particle list:')
+                for part in element.particles:
+                    log_write(f'      {part.name} ({part.type_short})')
                 new_list = element.particles[:first]
                 new_list.extend(list_with_missing)
                 if last > 0:
                     new_list.extend(element.particles[last:])
+                log_write('  New particle list:')
                 for part in new_list:
                     log_write(f'      {part.name} ({part.type_short})')
 
