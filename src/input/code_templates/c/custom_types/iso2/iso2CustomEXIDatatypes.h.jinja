@@ -9,7 +9,7 @@
 {% endblock description %}
 
 {% block includes %}
-#include <EXITypes.h>
+#include <exi_basetypes.h>
 {% endblock %}
 
 {% block defines %}
@@ -18,18 +18,18 @@
 {% endblock %}
 
 {% block content %}
-struct iso2EXISchemaInformedElementFragmentGrammar {
+struct iso2_EXISchemaInformedElementFragmentGrammar {
 	/* Schema-informed Element Fragment Grammar for START_ELEMENT({urn:iso:15118:2:2013:MsgBody}eMAID) */
 	/* 4 ATTRIBUTE[STRING]({urn:iso:15118:2:2013:MsgDataTypes}Id) */
 	unsigned int Id_isUsed:1;
 	struct {
-		exi_string_character_t characters[exiElementFrag_Id_CHARACTERS_SIZE];
+		char characters[exiElementFrag_Id_CHARACTERS_SIZE];
 		uint16_t charactersLen;
 	} Id ;
 	/* 247 START_ELEMENT({urn:iso:15118:2:2013:MsgBody}eMAID) */
 	unsigned int CHARACTERS_GENERIC_isUsed:1;
 	struct {
-		exi_string_character_t characters[exiElementFrag_CHARACTERS_GENERIC_CHARACTERS_SIZE];
+		char characters[exiElementFrag_CHARACTERS_GENERIC_CHARACTERS_SIZE];
 		uint16_t charactersLen;
 	} CHARACTERS_GENERIC ;
 
@@ -37,6 +37,6 @@ struct iso2EXISchemaInformedElementFragmentGrammar {
 	int _warning_;
 };
 
-void init_iso2EXISchemaInformedElementFragmentGrammar(struct iso2EXISchemaInformedElementFragmentGrammar* exiFrag);
+void init_iso2_EXISchemaInformedElementFragmentGrammar(struct iso2_EXISchemaInformedElementFragmentGrammar* exiFrag);
 
 {% endblock %}

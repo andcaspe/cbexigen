@@ -9,9 +9,10 @@
 {% endblock description %}
 
 {% block includes %}
-#include <iso1CustomEXIDatatypes.h>
+#include <iso2_CustomEXIDatatypes.h>
+#include <exi_bitstream.h>
 {% endblock %}
 
 {% block content %}
-int encode_iso2EXISchemaInformedElementFragmentGrammar(bitstream_t* stream, struct iso2EXISchemaInformedElementFragmentGrammar* exiElementFrag);
+int encode_iso2_EXISchemaInformedElementFragmentGrammar(exi_bitstream_t* stream, struct iso2_EXISchemaInformedElementFragmentGrammar* exiElementFrag);
 {% endblock %}
