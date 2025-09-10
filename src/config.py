@@ -46,7 +46,7 @@ choice_sequence_prefix = 'choice_'
 # With the fragment coder, the type for the ambiguous element must be specified
 # here so that the correct decoder or encoder is called.
 iso2_ambiguous_element_names = {
-    'eMAID': 'EMAIDType',
+    "eMAID": "EXISchemaInformedElementFragmentGrammar",
 }
 
 # optimizations for arrays and structs
@@ -395,7 +395,7 @@ c_files_to_generate = {
             'filename': 'iso2_msgDefDatatypes.h',
             'identifier': 'ISO2_MSG_DEF_DATATYPES_H',
             'include_std_lib': ['stdint.h'],
-            'include_other': ['exi_basetypes.h']
+            'include_other': ['exi_basetypes.h', 'iso2_CustomEXIDatatypes.h']
         },
         'c': {
             'filename': 'iso2_msgDefDatatypes.c',
@@ -413,7 +413,7 @@ c_files_to_generate = {
             'filename': 'iso2_msgDefDecoder.h',
             'identifier': 'ISO2_MSG_DEF_DECODER_H',
             'include_std_lib': [],
-            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h']
+            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h', 'iso2_CustomEXIDatatypesDecoder.h']
         },
         'c': {
             'filename': 'iso2_msgDefDecoder.c',
@@ -432,7 +432,7 @@ c_files_to_generate = {
             'filename': 'iso2_msgDefEncoder.h',
             'identifier': 'ISO2_MSG_DEF_ENCODER_H',
             'include_std_lib': [],
-            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h']
+            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h', 'iso2_CustomEXIDatatypesEncoder.h']
         },
         'c': {
             'filename': 'iso2_msgDefEncoder.c',
@@ -440,6 +440,63 @@ c_files_to_generate = {
             'include_std_lib': ['stdint.h'],
             'include_other': ['exi_basetypes.h', 'exi_basetypes_encoder.h', 'exi_error_codes.h', 'exi_header.h',
                               'iso2_msgDefDatatypes.h', 'iso2_msgDefEncoder.h']
+        }
+    },
+    "iso2_CustomEXIDatatypes": {
+        "prefix": "",
+        "type": "static",
+        'folder': 'iso-2',
+        "h": {
+            "template": "custom_types/iso2/iso2CustomEXIDatatypes.h.jinja",
+            "filename": "iso2_CustomEXIDatatypes.h",
+            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_H",
+            "include_std_lib": [],
+            "include_lib": []
+        },
+        "c": {
+            "template": "custom_types/iso2/iso2CustomEXIDatatypes.c.jinja",
+            "filename": "iso2_CustomEXIDatatypes.c",
+            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_C",
+            "include_std_lib": [],
+            "include_lib": []
+        }
+    },
+    "iso2_CustomEXIDatatypesEncoder": {
+        "prefix": "",
+        "type": "static",
+        'folder': 'iso-2',
+        "h": {
+            "template": "custom_types/iso2/iso2CustomEXIDatatypesEncoder.h.jinja",
+            "filename": "iso2_CustomEXIDatatypesEncoder.h",
+            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_ENCODER_H",
+            "include_std_lib": [],
+            "include_lib": []
+        },
+        "c": {
+            "template": "custom_types/iso2/iso2CustomEXIDatatypesEncoder.c.jinja",
+            "filename": "iso2_CustomEXIDatatypesEncoder.c",
+            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_ENCODER_C",
+            "include_std_lib": [],
+            "include_lib": []
+        }
+    },
+    "iso2_CustomEXIDatatypesDecoder": {
+        "prefix": "",
+        "type": "static",
+        'folder': 'iso-2',
+        "h": {
+            "template": "custom_types/iso2/iso2CustomEXIDatatypesDecoder.h.jinja",
+            "filename": "iso2_CustomEXIDatatypesDecoder.h",
+            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_DECODER_H",
+            "include_std_lib": [],
+            "include_lib": []
+        },
+        "c": {
+            "template": "custom_types/iso2/iso2CustomEXIDatatypesDecoder.c.jinja",
+            "filename": "iso2_CustomEXIDatatypesDecoder.c",
+            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_DECODER_C",
+            "include_std_lib": [],
+            "include_lib": []
         }
     },
     'iso20_CommonMessages_Datatypes': {
