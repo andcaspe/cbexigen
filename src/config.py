@@ -46,7 +46,7 @@ choice_sequence_prefix = 'choice_'
 # With the fragment coder, the type for the ambiguous element must be specified
 # here so that the correct decoder or encoder is called.
 iso2_ambiguous_element_names = {
-    "eMAID": "EXISchemaInformedElementFragmentGrammar",
+    'eMAID': 'EXISchemaInformedElementFragmentGrammar',
 }
 
 # optimizations for arrays and structs
