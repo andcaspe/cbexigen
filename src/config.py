@@ -442,61 +442,61 @@ c_files_to_generate = {
                               'iso2_msgDefDatatypes.h', 'iso2_msgDefEncoder.h', 'iso2_CustomEXIDatatypesEncoder.h']
         }
     },
-    "iso2_CustomEXIDatatypes": {
-        "prefix": "",
-        "type": "static",
+    'iso2_CustomEXIDatatypes': {
+        'prefix': '',
+        'type': 'static',
         'folder': 'iso-2',
-        "h": {
-            "template": "custom_types/iso2/iso2CustomEXIDatatypes.h.jinja",
-            "filename": "iso2_CustomEXIDatatypes.h",
-            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_H",
-            "include_std_lib": [],
-            "include_lib": []
+        'h': {
+            'template': 'custom_types/iso2/iso2CustomEXIDatatypes.h.jinja',
+            'filename': 'iso2_CustomEXIDatatypes.h',
+            'identifier': 'ISO2_CUSTOM_EXI_DATATYPES_H',
+            'include_std_lib': [],
+            'include_lib': []
         },
-        "c": {
-            "template": "custom_types/iso2/iso2CustomEXIDatatypes.c.jinja",
-            "filename": "iso2_CustomEXIDatatypes.c",
-            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_C",
-            "include_std_lib": [],
-            "include_lib": []
+        'c': {
+            'template': 'custom_types/iso2/iso2CustomEXIDatatypes.c.jinja',
+            'filename': 'iso2_CustomEXIDatatypes.c',
+            'identifier': 'ISO2_CUSTOM_EXI_DATATYPES_C',
+            'include_std_lib': [],
+            'include_lib': []
         }
     },
-    "iso2_CustomEXIDatatypesEncoder": {
-        "prefix": "",
-        "type": "static",
+    'iso2_CustomEXIDatatypesEncoder': {
+        'prefix': '',
+        'type': 'static',
         'folder': 'iso-2',
-        "h": {
-            "template": "custom_types/iso2/iso2CustomEXIDatatypesEncoder.h.jinja",
-            "filename": "iso2_CustomEXIDatatypesEncoder.h",
-            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_ENCODER_H",
-            "include_std_lib": [],
-            "include_lib": []
+        'h': {
+            'template': 'custom_types/iso2/iso2CustomEXIDatatypesEncoder.h.jinja',
+            'filename': 'iso2_CustomEXIDatatypesEncoder.h',
+            'identifier': 'ISO2_CUSTOM_EXI_DATATYPES_ENCODER_H',
+            'include_std_lib': [],
+            'include_lib': []
         },
-        "c": {
-            "template": "custom_types/iso2/iso2CustomEXIDatatypesEncoder.c.jinja",
-            "filename": "iso2_CustomEXIDatatypesEncoder.c",
-            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_ENCODER_C",
-            "include_std_lib": [],
-            "include_lib": []
+        'c': {
+            'template': 'custom_types/iso2/iso2CustomEXIDatatypesEncoder.c.jinja',
+            'filename': 'iso2_CustomEXIDatatypesEncoder.c',
+            'identifier': 'ISO2_CUSTOM_EXI_DATATYPES_ENCODER_C',
+            'include_std_lib': [],
+            'include_lib': []
         }
     },
-    "iso2_CustomEXIDatatypesDecoder": {
-        "prefix": "",
-        "type": "static",
+    'iso2_CustomEXIDatatypesDecoder': {
+        'prefix': '',
+        'type': 'static',
         'folder': 'iso-2',
-        "h": {
-            "template": "custom_types/iso2/iso2CustomEXIDatatypesDecoder.h.jinja",
-            "filename": "iso2_CustomEXIDatatypesDecoder.h",
-            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_DECODER_H",
-            "include_std_lib": [],
-            "include_lib": []
+        'h': {
+            'template': 'custom_types/iso2/iso2CustomEXIDatatypesDecoder.h.jinja',
+            'filename': 'iso2_CustomEXIDatatypesDecoder.h',
+            'identifier': 'ISO2_CUSTOM_EXI_DATATYPES_DECODER_H',
+            'include_std_lib': [],
+            'include_lib': []
         },
-        "c": {
-            "template": "custom_types/iso2/iso2CustomEXIDatatypesDecoder.c.jinja",
-            "filename": "iso2_CustomEXIDatatypesDecoder.c",
-            "identifier": "ISO2_CUSTOM_EXI_DATATYPES_DECODER_C",
-            "include_std_lib": [],
-            "include_lib": []
+        'c': {
+            'template': 'custom_types/iso2/iso2CustomEXIDatatypesDecoder.c.jinja',
+            'filename': 'iso2_CustomEXIDatatypesDecoder.c',
+            'identifier': 'ISO2_CUSTOM_EXI_DATATYPES_DECODER_C',
+            'include_std_lib': [],
+            'include_lib': []
         }
     },
     'iso20_CommonMessages_Datatypes': {
