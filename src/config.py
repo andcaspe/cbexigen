@@ -413,14 +413,14 @@ c_files_to_generate = {
             'filename': 'iso2_msgDefDecoder.h',
             'identifier': 'ISO2_MSG_DEF_DECODER_H',
             'include_std_lib': [],
-            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h', 'iso2_CustomEXIDatatypesDecoder.h']
+            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h']
         },
         'c': {
             'filename': 'iso2_msgDefDecoder.c',
             'identifier': 'ISO2_MSG_DEF_DECODER_C',
             'include_std_lib': ['stdint.h'],
             'include_other': ['exi_basetypes.h', 'exi_basetypes_decoder.h', 'exi_error_codes.h', 'exi_header.h',
-                              'exi_types_decoder.h', 'iso2_msgDefDatatypes.h', 'iso2_msgDefDecoder.h']
+                              'exi_types_decoder.h', 'iso2_msgDefDatatypes.h', 'iso2_msgDefDecoder.h', 'iso2_CustomEXIDatatypesDecoder.h']
         }
     },
     'iso2_msgDefEncoder': {
@@ -432,14 +432,14 @@ c_files_to_generate = {
             'filename': 'iso2_msgDefEncoder.h',
             'identifier': 'ISO2_MSG_DEF_ENCODER_H',
             'include_std_lib': [],
-            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h', 'iso2_CustomEXIDatatypesEncoder.h']
+            'include_other': ['exi_bitstream.h', 'iso2_msgDefDatatypes.h']
         },
         'c': {
             'filename': 'iso2_msgDefEncoder.c',
             'identifier': 'ISO2_MSG_DEF_ENCODER_C',
             'include_std_lib': ['stdint.h'],
             'include_other': ['exi_basetypes.h', 'exi_basetypes_encoder.h', 'exi_error_codes.h', 'exi_header.h',
-                              'iso2_msgDefDatatypes.h', 'iso2_msgDefEncoder.h']
+                              'iso2_msgDefDatatypes.h', 'iso2_msgDefEncoder.h', 'iso2_CustomEXIDatatypesEncoder.h']
         }
     },
     "iso2_CustomEXIDatatypes": {
