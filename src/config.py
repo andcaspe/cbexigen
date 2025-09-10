@@ -293,7 +293,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'appHand_Datatypes.c',
             'identifier': 'APP_HANDSHAKE_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['appHand_Datatypes.h']
         }
     },
@@ -350,7 +350,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'din_msgDefDatatypes.c',
             'identifier': 'DIN_MSG_DEF_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['din_msgDefDatatypes.h']
         }
     },
@@ -406,7 +406,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'iso2_msgDefDatatypes.c',
             'identifier': 'ISO2_MSG_DEF_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['iso2_msgDefDatatypes.h']
         }
     },
@@ -462,7 +462,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'iso20_CommonMessages_Datatypes.c',
             'identifier': 'ISO20_COMMON_MESSAGES_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['iso20_CommonMessages_Datatypes.h']
         }
     },
@@ -519,7 +519,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'iso20_AC_Datatypes.c',
             'identifier': 'ISO20_AC_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['iso20_AC_Datatypes.h']
         }
     },
@@ -575,7 +575,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'iso20_DC_Datatypes.c',
             'identifier': 'ISO20_DC_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['iso20_DC_Datatypes.h']
         }
     },
@@ -632,7 +632,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'iso20_WPT_Datatypes.c',
             'identifier': 'ISO20_WPT_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['iso20_WPT_Datatypes.h']
         }
     },
@@ -689,7 +689,7 @@ c_files_to_generate = {
         'c': {
             'filename': 'iso20_ACDP_Datatypes.c',
             'identifier': 'ISO20_ACDP_DATATYPES_C',
-            "include_std_lib": ["string.h"],
+            'include_std_lib': ['string.h'],
             'include_other': ['iso20_ACDP_Datatypes.h']
         }
     },
